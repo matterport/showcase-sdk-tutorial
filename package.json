@@ -1,0 +1,11 @@
+{
+  "name": "showcase-sdk-tutorial",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:gbruce/showcase-sdk-tutorial.git",
+  "author": "Guillermo Bruce <guillermo@matterport.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
