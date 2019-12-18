@@ -6,7 +6,7 @@
   "author": "Guillermo Bruce <guillermo@matterport.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
