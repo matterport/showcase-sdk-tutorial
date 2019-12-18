@@ -5,6 +5,9 @@
   "repository": "git@github.com:gbruce/showcase-sdk-tutorial.git",
   "author": "Guillermo Bruce <guillermo@matterport.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
