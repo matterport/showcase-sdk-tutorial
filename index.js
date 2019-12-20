@@ -13,4 +13,5 @@ showcase.addEventListener('load', async function() {
   }
 
   console.log('%c  Hello Bundle SDK! ', 'background: #333333; color: #00dd00');
+
 });
