@@ -6,19 +6,28 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './index.js',
+    app: './index.ts',
   },
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Development',
       template: 'index.html',
-      inject: false
+      inject: true
     }),
     new CopyPlugin([
       { from: 'bundle', to: 'dist/bundle' },
     ]),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.ts?$/,
+        loader: 'ts-loader'
+      },
+    ]
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
