@@ -6,9 +6,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './index.ts',
+    app: './src/index.ts',
   },
   devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.ts']
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

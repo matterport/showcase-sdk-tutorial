@@ -1,10 +1,16 @@
 
-interface Window {
-  MP_SDK: any;
-}
-
 const showcase = document.getElementById('showcase') as HTMLIFrameElement;
 const key = 'YOUR KEY HERE';
+
+// declare this file is a module
+export {};
+
+// augment window with the MP_SDK property
+declare global {
+  interface Window {
+    MP_SDK: any;
+  }
+}
 
 showcase.addEventListener('load', async function() {
   let sdk;

@@ -9,12 +9,13 @@
     "noImplicitReturns": true,
     "noEmitOnError": true,
     "noUnusedLocals": true,
+    "esModuleInterop": true,
     "lib": [
       "es2017",
       "dom"
     ],
   },
   "include": [
-    "index.ts",
-  ],
+    "src/**/*.ts"
+  ]
 }
