@@ -26,7 +26,7 @@ const loadBundle = async function() {
   console.log(sdk);
 };
 
-if (document.readyState === 'complete') {
+if (showcase.contentDocument.readyState === 'complete') {
   loadBundle();
 }
 else {
