@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-showcase.addEventListener('load', async function() {
+const loadBundle = async function() {
   let sdk;
   try {
     sdk = await showcase.contentWindow.MP_SDK.connect(showcase, key, '3.2');
@@ -24,4 +24,11 @@ showcase.addEventListener('load', async function() {
 
   console.log('%c  Hello Bundle SDK! ', 'background: #333333; color: #00dd00');
   console.log(sdk);
-});
+};
+
+if (showcase.contentDocument.readyState === 'complete') {
+  loadBundle();
+}
+else {
+  showcase.addEventListener('load', loadBundle);
+}
