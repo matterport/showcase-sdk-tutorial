@@ -1,5 +1,5 @@
 const showcase = document.getElementById('showcase') as HTMLIFrameElement;
-const key = 'YOUR KEY HERE';
+const key = 'YOUR_KEY_HERE';
 
 // declare this file is a module
 export {};
@@ -14,7 +14,7 @@ declare global {
 showcase.addEventListener('load', async function() {
   let sdk;
   try {
-    sdk = await showcase.contentWindow.MP_SDK.connect(showcase, key, '3.2');
+    sdk = await showcase.contentWindow.MP_SDK.connect(showcase, key, '3.6');
   }
   catch(e) {
     console.error(e);
